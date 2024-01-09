@@ -38,7 +38,6 @@ a {
   height: 100vh;
   position: relative;
   display: inline-block;
-  font-size: 30px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -50,9 +49,9 @@ a {
   display: flex;
   flex-direction: column;
   background-color: rgba(253, 221, 182, 0.7); /* Ændret til en mere gennemsigtig farve */
-  padding: 10px 60px;
+  padding: 0px 60px;
   border-radius: 10px;
-  margin-top: 278px; /* Juster topmargenen efter behov */
+  margin-top: 250px; /* Juster topmargenen efter behov */
 }
 
 .tekst-over-billede {
@@ -63,6 +62,7 @@ a {
   margin: 5px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
+  font-size: 25px;
   letter-spacing: 2px;
 }
 /*PORTFOLIO*/
