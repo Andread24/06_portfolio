@@ -1,0 +1,545 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@100;300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+/*FORSIDE*/
+.forside-container {
+  background-image: url(img/forside.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  position: relative;
+  display: inline-block;
+  font-size: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tekst-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(253, 221, 182, 0.7); /* Ændret til en mere gennemsigtig farve */
+  padding: 10px 60px;
+  border-radius: 10px;
+  margin-top: 278px; /* Juster topmargenen efter behov */
+}
+
+.tekst-over-billede {
+  pointer-events: auto;
+  text-decoration: none;
+  color: #000;
+  padding: 5px 10px;
+  margin: 5px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+/*PORTFOLIO*/
+
+.box {
+  transition: transform 0.3s ease-in-out;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  box-shadow: 0 0 0 2px #4b4030, 8px 8px 0 0 #4b4030;
+}
+
+.box img {
+  border-radius: 20px;
+  border: 2px solid #4b4030;
+}
+
+.box:hover {
+  transform: scale(1.1);
+}
+
+/*SKIFTENDE LAYOUT*/
+
+.full-width-column {
+  background-color: #4b4030;
+  padding: 30px;
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%; /* Dette får kolonnen til at strække sig over hele skærmen */
+}
+
+.full-width-column h1 {
+  color: #fff;
+}
+
+.grid_4-1,
+.grid_4-3,
+.grid_4-4,
+.grid_4-5,
+.grid_4-7 {
+  color: #1a1a1a;
+  background-color: #f0e8de;
+  padding: 5%;
+}
+
+.grid_4-2,
+.grid_4-4,
+.grid_4-6,
+.grid_5-3,
+.grid_5-6 {
+  color: #1a1a1a;
+  background-color: rgb(214, 204, 186);
+  padding: 5%;
+}
+
+.grid_4-1,
+.grid_4-2,
+.grid_4-3,
+.grid_4-4,
+.grid_4-5,
+.grid_4-6,
+.grid_5-6 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/*3 KOLONNE*/
+
+.grund_web_container {
+  grid-template-columns: 1fr; /* Ændrer til en kolonne for mindre skærme */
+  background-color: rgb(214, 204, 186);
+  padding: 5%;
+  color: #1a1a1a;
+}
+
+.grund_web_container img {
+  border-radius: 10px;
+}
+
+/* 2 KOLONNE*/
+.grund_animation_container {
+  grid-template-columns: 1fr; /* Ændrer til en kolonne for mindre skærme */
+  background-color: #f0e8de;
+  padding: 5%;
+  color: #1a1a1a;
+}
+
+.grund_animation_container img {
+  border-radius: 10px;
+}
+
+.indhold-top {
+  background-color: rgb(214, 204, 186);
+}
+
+.animation-bottom {
+  background-color: #f0e8de;
+}
+
+.sticky-column {
+  display: none;
+}
+
+/* Responsivt design ved mindre skærme */
+.logo {
+  flex: 0 0 calc(50% - 20px); /* 2 kolonner på mindre skærme */
+  max-width: calc(50% - 20px);
+}
+
+/*CV*/
+
+#portfolio {
+  padding: 50px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Juster efter behov */
+}
+
+.left-column img {
+  width: 80%;
+  max-width: 100%; /* Tilpas billedets størrelse efter behov */
+  height: auto;
+  border-radius: 100px;
+  border: 1px solid #4b4030;
+}
+
+.left-column,
+.middle-column,
+.right-column {
+  flex-basis: 100%; /* Ændrer bredden til 100% på mindre skærme */
+  color: #4b4030;
+  padding: 5%;
+}
+
+/* Basisstil for galleriet */
+.gallery {
+  display: flex;
+  justify-content: center; /* Centrer elementerne vandret */
+  align-items: center; /* Centrer elementerne lodret */
+  flex-wrap: wrap; /* Hvis du vil have responsivitet */
+  gap: 10px; /* Juster afstanden mellem logoerne */
+}
+
+/* Stil for hvert logo */
+.logo {
+  flex: 0 0 calc(33.33% - 20px); /* 3 kolonner, juster gap-størrelsen */
+  max-width: calc(20% - 20px);
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.left-column {
+  background-color: rgb(214, 204, 186);
+}
+
+.middle-column {
+  border-left: 2px solid rgb(214, 204, 186);
+  border-right: 2px solid rgb(214, 204, 186);
+}
+
+.right-column {
+  background-color: rgb(214, 204, 186);
+}
+
+.middle-column h3,
+.right-column h3,
+.left-column h3 {
+  bottom: -3px; /* Ændr denne værdi for at justere længden af understregningen */
+  width: 100%; /* 100% af bredden af overskriften */
+  border-bottom: 3px solid #9c8563; /* Stilen af understregningen */
+  padding-top: 20px;
+  color: #9c8563;
+}
+
+.left-column h1 {
+  bottom: -3px; /* Ændr denne værdi for at justere længden af understregningen */
+  width: 100%; /* 100% af bredden af overskriften */
+  border-bottom: 8px dotted #4b4030; /* Stilen af understregningen */
+  padding-top: 30px;
+}
+
+.kompetencer {
+  display: flex;
+  justify-content: center; /* Centrer elementerne vandret */
+  align-items: center; /* Centrer elementerne lodret */
+  flex-wrap: wrap; /* Hvis du vil have responsivitet */
+  gap: 10px; /* Juster afstanden mellem logoerne */
+}
+
+.kompetencer h3 {
+  flex-basis: calc(33.3333% - 10px);
+  border-bottom: none;
+  border: 1px solid #4b4030;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #4b4030;
+  color: rgb(253, 221, 182);
+}
+
+.erhverv {
+  padding-bottom: 20px;
+  bottom: -3px; /* Ændr denne værdi for at justere længden af understregningen */
+  width: 100%; /* 100% af bredden af overskriften */
+  border-bottom: 3px solid rgb(214, 204, 186); /* Stilen af understregningen */
+}
+
+.erhverv li {
+  padding-bottom: 20px;
+}
+
+/*Grund web*/
+.grund_web_img {
+  position: relative;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #f0e8de;
+  width: 100%;
+}
+
+.text_corner {
+  position: absolute;
+  top: 28%;
+  right: 6%;
+  font-size: 40px;
+  color: #1a1a1a;
+}
+
+.grund_web_img img {
+  width: 100%;
+  object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  /*FORSIDE*/
+
+  main {
+    font-size: 18px;
+  }
+  .combined-column {
+    display: flex;
+  }
+
+  iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 15px;
+  }
+
+  /* SKIFTENDE LAYOUT*/
+  .col_4-2,
+  .col_4-3,
+  .col_4-6,
+  .col_4-7,
+  .col_4-9,
+  .col_4-11,
+  .col_4-13 {
+    margin: 5%;
+  }
+
+  .col_4-1,
+  .col_4-4,
+  .col_4-5,
+  .col_4-8,
+  .col_4-10,
+  .col_4-12 {
+    margin: 5%;
+  }
+
+  ul {
+    font-size: 18px;
+  }
+
+  .grid_4-1,
+  .grid_4-3,
+  .grid_4-4,
+  .grid_4-5,
+  .grid_4-7 {
+    color: #1a1a1a;
+    background-color: #f0e8de;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1% 3%;
+  }
+
+  .grid_4-2,
+  .grid_4-4,
+  .grid_4-6,
+  .grid_5-3,
+  .grid_5-6 {
+    color: #1a1a1a;
+    background-color: rgb(214, 204, 186);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1% 3%;
+  }
+
+  h2 {
+    bottom: -3px; /* Ændr denne værdi for at justere længden af understregningen */
+    width: 100%; /* 100% af bredden af overskriften */
+    border-bottom: 5px solid #4b4030; /* Stilen af understregningen */
+  }
+
+  h3 {
+    margin-bottom: 1.5%;
+    font-size: 1.4rem;
+  }
+
+  /*STICKY NAVBAR*/
+  .sidenav {
+    height: 100%;
+    width: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 140px;
+    font-size: 20px;
+  }
+
+  .sidenav a {
+    padding: 10px 8px 6px 16px;
+    text-decoration: none;
+    color: #f0e8de;
+    display: block;
+  }
+
+  .sidenav a:hover {
+    color: #4b4030;
+  }
+  /*STICKY COLUMN*/
+
+  .sticky-column {
+    flex: 1;
+    position: sticky;
+    top: 0;
+    padding: 30px;
+    box-shadow: -20px 0 10px -20px rgba(0, 0, 0, 0.45) inset;
+    background-color: #9c8563;
+    display: block; /* Ændret display til block for at gøre den synlig */
+  }
+
+  .sticky-indhold {
+    position: sticky;
+    top: 0px;
+    padding: 5%;
+  }
+
+  /*MAIN COLUMN*/
+
+  .main-column {
+    flex: 9;
+    background-color: #f8f8f8;
+  }
+
+  /*GRUNDLÆGGENDE WEB*/
+
+  .text_corner {
+    position: absolute;
+    top: 28%;
+    right: 6%;
+    font-size: 70px;
+    color: #1a1a1a;
+  }
+
+  /* 3 KOLLONER*/
+  .grund_web_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    background-color: rgb(214, 204, 186);
+    padding: 3% 5%;
+    color: #1a1a1a;
+  }
+
+  /*ANIMATION*/
+
+  /* 2 KOLLONER*/
+  .grund_animation_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    background-color: #f0e8de;
+    padding: 3% 5%;
+    color: #1a1a1a;
+  }
+
+  .indhold-top {
+    background-color: rgb(214, 204, 186);
+  }
+
+  /*PORTFOLIO MENU*/
+  .portfolio-container {
+    background-color: rgb(214, 204, 186);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .box {
+    width: 500px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .box img {
+    border-radius: 20px;
+  }
+
+  .box:hover {
+    transform: scale(1.1);
+  }
+
+  #portfolio {
+    padding: 0;
+  }
+
+  /*CV*/
+
+  .cv-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .left-column {
+    flex-basis: 25%;
+    background-color: rgb(214, 204, 186);
+    padding: 20px;
+    box-sizing: border-box;
+    padding-top: 5%;
+    box-shadow: -20px 0 10px -20px #9c8563 inset;
+  }
+
+  .middle-column,
+  .right-column {
+    flex-basis: 37.5%; /* Ens bredde for de to andre kolonner */
+    background-color: #f0e8de;
+    padding: 20px;
+    box-sizing: border-box;
+    padding-top: 5%;
+  }
+
+  .middle-column h3,
+  .right-column h3 {
+    padding-top: 0px;
+  }
+
+  .left-column h1 {
+    padding-top: 0px;
+  }
+
+  .middle-column {
+    border-right: 3px dotted #9c8563; /* Stilen af understregningen */
+  }
+  .logo {
+    max-width: calc(18% - 25px);
+  }
+
+  .kompetencer h3 {
+    flex-basis: calc(33.3333% - 49px);
+    padding: 10px;
+  }
+}

@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+main {
+  background-color: #f0e8de;
+}
+
+li {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+/*SCROLL TO TOP*/
+#myBtn {
+  position: fixed; /* Knappen forbliver fast positioneret på siden, selv når man scroller */
+  bottom: 40px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  padding: 10px 30px;
+  border: none;
+  outline: none;
+  background-color: #1a1a1a;
+  color: #f0e8de;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+#myBtn:hover {
+  background-color: #75644a;
+}
+
+/* BURGERMENU */
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  color: #f0e8de;
+  font-size: 40px;
+  padding-left: 30px;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  width: 40%;
+  background-color: #75644a;
+  top: 74px; /* Height of the navbar */
+  left: 0;
+  color: #4b4030;
+  padding: 30px;
+  font-size: 18px;
+}
+
+.nav-links li {
+  margin-right: 0;
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.burger-menu {
+  display: block;
+}
+
+.burger-menu:hover {
+  color: #f0e8de;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fdddb6;
+  padding: 0px 0px;
+  border-radius: 0px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.navbar {
+  color: #4b4030;
+  background-color: #4b4030;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+/*HOVER*/
+a:hover {
+  color: #9c8563;
+}
+
+/*FOOTER*/
+.footer {
+  font-size: 18px;
+  text-align: center;
+  background-color: #4b4030;
+  color: #f0e8de;
+  padding-left: 20px;
+}
+
+.footer-menu a {
+  color: #f0e8de;
+  text-decoration: none;
+}
+
+.footer-content {
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 20px;
+}
+.footer-menu {
+  text-align: left;
+}
+.footer-menu li {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer ul {
+  padding-left: 0px;
+}
+
+.footer-text {
+  text-align: left;
+}
+.footer-bottom p {
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  color: #fdddb6;
+}
+
+.footer h3 {
+  padding-top: 20px;
+  color: #fdddb6;
+}
+
+.footer-menu a:hover {
+  color: #9c8563;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  /*NAVIGATIONSBAR*/
+  .burger-menu {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: auto;
+    background-color: transparent;
+    top: auto;
+    left: auto;
+    flex-direction: row;
+    font-size: 25px;
+    padding: 20px;
+  }
+
+  .nav-links li {
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+
+  .nav-links a {
+    padding: 10px 20px;
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  .nav-links a:hover {
+    color: #9c8563;
+    background-color: transparent;
+  }
+
+  /*FOOTER*/
+  .footer {
+    font-size: 18px;
+    text-align: center;
+    background-color: #4b4030;
+    color: #f0e8de;
+    padding: 30px 0;
+  }
+
+  .footer_container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 25% 23% 25%;
+  }
+
+  .footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .footer-menu li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .footer-menu li:last-child {
+    margin-right: 0;
+  }
+
+  .footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .footer-content {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-menu {
+    text-align: center;
+  }
+
+  .footer-text {
+    text-align: center;
+  }
+
+  .footer h3 {
+    padding-top: 0px;
+  }
+
+  main {
+    padding: 0px;
+    background-color: #f0e8de;
+  }
+}
